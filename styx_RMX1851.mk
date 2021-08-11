@@ -5,7 +5,7 @@
 #
 
 # Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/styx/config/common.mk)
 
 # Inherit from RMX1851 device.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -15,10 +15,14 @@ TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := RMX1851
-PRODUCT_NAME := aosp_RMX1851
+PRODUCT_NAME := styx_RMX1851
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme 3 Pro
 PRODUCT_MANUFACTURER := Realme
+
+# Fingerprint
+BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys
+BUILD_DESCRIPTION := redfin-user 11 RQ3A.210805.001.A1 7474174 release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
